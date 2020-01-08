@@ -1,9 +1,13 @@
-class ReturnaPromise {
-    
-    promise = new Promise ((resolve,reject) => {
-        
+import { resolve } from "dns"
+
+function returnAPromise () {
+    let promise = new Promise ((resolve,reject) => {
+       console.log('hello from inside the II executor') 
+       resolve('the promise resolves into this string')
     })
+    console.log(promise)
+    return promise
 }
 
-let instance = new ReturnaPromise
-console.log(instance.variable)
+let result = returnAPromise()
+console.log(typeof result)
