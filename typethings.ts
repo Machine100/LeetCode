@@ -8,6 +8,13 @@ for (let i=0; i<100; i++) {
     sortMe[i] = randomNumber
 }
 console.log(sortMe)
+console.log(sortMe.length)
+
+for(let i=0; i<=sortMe.length; i++) {
+    if (sortMe[i]>sortMe[i+1]) {
+
+    }
+}
 
 
 
