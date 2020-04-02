@@ -9,7 +9,7 @@ export class ManipulateObjectsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { this.methodThree() }
+  ngOnInit() { this.methodFour() }
 
   methodOne() {
     //you can type in any plain js code into this area
@@ -33,7 +33,7 @@ export class ManipulateObjectsComponent implements OnInit {
     console.log(fullNames)
   }
 
-  methodTwo() {
+  methodTwo () {
     //Rewrite the above code to use forEach and then run each iteration through the event queue.
     //Discover how this can be done with setTimeout 0 then research how to do it with es6 generators.
     // =-=-= Actually Async-Await eclipsed the generator/promise/iterator complexity in ES 7 so dont actually have to dig into this anymore.
@@ -57,8 +57,8 @@ export class ManipulateObjectsComponent implements OnInit {
 
     console.log(output)
   }
-
-  methodThree() {
+    
+  methodThree () {
     // Write a functions that returns a promise that is resolved after a subsequent consloe.log
 
     function returnAPromise () {
@@ -76,10 +76,12 @@ export class ManipulateObjectsComponent implements OnInit {
       promise.then ( e=>{console.log(e)})
 
     }
+
+  methodFour () {
+
   }
 
-
-//}
+  }
 
 
   
