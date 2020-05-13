@@ -28,4 +28,4 @@ let villager1:Contact = {
     }
 }
 
-console.log (getInformation(villager1))
+console.log (getInformation(villager1),villager1.data.phone)
