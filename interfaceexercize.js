@@ -14,4 +14,4 @@ var villager1 = {
         }
     }
 };
-console.log(getInformation(villager1));
+console.log(getInformation(villager1), villager1.data.phone);
