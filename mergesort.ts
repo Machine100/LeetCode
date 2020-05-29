@@ -1,9 +1,11 @@
-const sortMa: number[] = [4,6,7,8,2,3,4,8,6,2,5,7,9,0,7,6,4,3,6,7,8,6,5,43,6,8,8]
+let sortMa: number[] = [43,6,2]
 
 let mergeSort = (referenceTosortMA: number[], pointerStart?: number, pointerEnd?:number) => {
-    if (pointerStart === null) pointerStart = 0
-    if (pointerEnd === null) pointerEnd = Math.ceil(sortMa.length/2)
-    if (pointerStart === pointerEnd - 1) {             // check for base case of pointers adjacent
+    if (pointerStart === undefined) pointerStart = 0
+    if (pointerEnd === undefined) pointerEnd = sortMa.length - 1 
+    console.log('pointerStart:', pointerStart,' pointerEnd: ', pointerEnd)
+
+    if (pointerStart === pointerEnd) {             // check for base case of single digit 
         combine(referenceTosortMA, pointerStart, pointerEnd);
         return
     }
@@ -19,7 +21,7 @@ let combine = (referenceTosortMa: number[], leftStart: number, rightEnd: number)
 
     let rightStart: number = Math.ceil( (leftStart + rightEnd) / 2 )
     let leftEnd: number = rightStart - 1
-
+    console.log('combine:', 'LS:', leftStart,'LE',leftEnd,'RS',rightStart,'RE',rightEnd)
     let leftIndex:number = leftStart
     let rightIndex:number = rightStart
 
@@ -41,6 +43,14 @@ let combine = (referenceTosortMa: number[], leftStart: number, rightEnd: number)
         tempMa.push(sortMa[rightIndex])
         rightIndex++
     }
-    
-    return
+    console.log('tempMa:', tempMa)
+    for (let i=leftStart; i<=rightEnd; i++) {
+        sortMa[i] = tempMa.shift()
+    } 
+
+    console.log('sortMa:', sortMa)
+        return
 }
+
+mergeSort(sortMa)
+console.log(sortMa)
