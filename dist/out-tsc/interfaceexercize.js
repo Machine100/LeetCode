@@ -12,5 +12,5 @@ let villager1 = {
         }
     }
 };
-console.log(getInformation(villager1));
+console.log(getInformation(villager1), villager1.data.phone);
 //# sourceMappingURL=interfaceexercize.js.map

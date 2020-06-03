@@ -1,7 +1,7 @@
 // given an array of integers, show how many times each value appears
 // arrow functions preserve the lexical value of this.
-let integers = [4, 3, 5, 6, 7, 8, 6, 5, 4, 4, 3, 3, 4, 5, 6, 77, 7, 5, 34, 3, 5, 5, 65];
-let hashMap = new Map();
+var integers = [4, 3, 5, 6, 7, 8, 6, 5, 4, 4, 3, 3, 4, 5, 6, 77, 7, 5, 34, 3, 5, 5, 65];
+var hashMap = new Map();
 // let hashMap = new Object.create(Object.prototype) what is passed in is the prototype to use
 console.log(hashMap);
 // new vim command: to surround text with a symbol use ys w ( 
@@ -11,7 +11,7 @@ console.log(hashMap);
 // iterate through integers
 // if key doesn't exist, add it to the map
 //   otherwise increment the existing key
-integers.forEach((item) => {
+integers.forEach(function (item) {
     console.log('hashMap.has(item):', hashMap.has(item));
     console.log('item:', item);
     if (hashMap.has(item)) {

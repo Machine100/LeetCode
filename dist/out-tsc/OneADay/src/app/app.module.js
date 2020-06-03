@@ -10,13 +10,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { RiversComponent } from './components/rivers/rivers.component';
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     NgModule({
         declarations: [
             AppComponent,
-            DashboardComponent
+            DashboardComponent,
+            RiversComponent
         ],
         imports: [
             BrowserModule,
