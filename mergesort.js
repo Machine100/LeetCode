@@ -1,4 +1,4 @@
-var sortMa = [43, 6, 2];
+var sortMa = [43, 6, 2, 1, 6, 2, 6, 9, 7, 5, 444, 3];
 var mergeSort = function (referenceTosortMA, pointerStart, pointerEnd) {
     if (pointerStart === undefined)
         pointerStart = 0;
@@ -12,7 +12,7 @@ var mergeSort = function (referenceTosortMA, pointerStart, pointerEnd) {
     var pointerMiddle = Math.ceil((pointerStart + pointerEnd) / 2);
     mergeSort(sortMa, pointerStart, pointerMiddle - 1); // pass left side
     mergeSort(sortMa, pointerMiddle, pointerEnd);
-    combine(sortMa, pointerStart, pointerMiddle);
+    combine(sortMa, pointerStart, pointerEnd);
     return;
 };
 var combine = function (referenceTosortMa, leftStart, rightEnd) {

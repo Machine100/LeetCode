@@ -1,4 +1,4 @@
-let sortMa: number[] = [43,6,2]
+let sortMa: number[] = [43,6,2,1,6,2,6,9,7,5,444,3]
 
 let mergeSort = (referenceTosortMA: number[], pointerStart?: number, pointerEnd?:number) => {
     if (pointerStart === undefined) pointerStart = 0
@@ -12,7 +12,7 @@ let mergeSort = (referenceTosortMA: number[], pointerStart?: number, pointerEnd?
     let pointerMiddle: number = Math.ceil( (pointerStart + pointerEnd)/2 )
     mergeSort(sortMa, pointerStart, pointerMiddle-1)      // pass left side
     mergeSort(sortMa, pointerMiddle, pointerEnd)
-    combine (sortMa, pointerStart, pointerMiddle)
+    combine (sortMa, pointerStart, pointerEnd)
     return
 }
 
