@@ -4,5 +4,5 @@ let array: number[] = [11,22,33,44]
 //     console.log(array[i])
 // }
 
-let res: number = array.reduce( (accumulator: number, currentValue: number): number => {return accumulator + currentValue}, 0 )
+let res: number = array.reduce( (accumulator: number, currentValue: number): number => {return accumulator + currentValue})
 console.log(res)
